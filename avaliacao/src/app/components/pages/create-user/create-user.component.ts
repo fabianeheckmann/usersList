@@ -23,7 +23,7 @@ export class CreateUserComponent implements OnInit {
   ngOnInit(): void {}
 
   navigateToScreenList(user: User) {
-    this.router.navigate(['/user-list']);
+    this.router.navigate(['/']);
   }
 
   showScreenSelectionModal(user: User) {

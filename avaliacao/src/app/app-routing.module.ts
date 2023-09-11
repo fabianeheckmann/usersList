@@ -6,8 +6,7 @@ import { CreateUserComponent } from './components/pages/create-user/create-user.
 import { EditUserComponent } from './components/pages/edit-user/edit-user.component';
 
 const routes: Routes = [
-  { path: 'user-list', component: UserListComponent },
-  { path: 'user-details', component: UserDetailsComponent },
+  { path: '', component: UserListComponent },
   { path: 'create-user', component: CreateUserComponent },
   { path: 'user/:id', component: UserDetailsComponent },
   { path: 'edit-user/:id', component: EditUserComponent },

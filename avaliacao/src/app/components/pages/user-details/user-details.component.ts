@@ -66,6 +66,6 @@ export class UserDetailsComponent implements OnInit {
   }
 
   navigateToUserList() {
-    this.router.navigate(['/user-list']);
+    this.router.navigate(['/']);
   }
 }

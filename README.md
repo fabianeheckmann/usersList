@@ -1,10 +1,24 @@
 # usersList
 User list display and editing project with external consumption API.
 
-starting project:
+<!-- configure project: -->
 
 install node modules: execute comand npm i
 
-if erro for angular, execute comand npm install -g @angular/cli
+if erro for angular, execute command npm install -g @angular/cli
 
-execute comand npm ci for updade a extensions e modules
+execute command npm ci for updade a dependences and modules
+
+<!-- start project  -->
+
+execute command:
+
+npm start 
+or 
+ng serve 
+
+enter  http://localhost:4200/ 
+
+
+
+

@@ -67,7 +67,7 @@ export class UserListComponent implements OnInit {
                   'Succcess',
                   `user ${user.firstName} successfully deleted`
                 );
-                this.router.navigate(['/user-list']);
+                this.router.navigate(['/']);
               },
               (error) => {
                 console.error('Error deleting user:', error);
@@ -75,7 +75,7 @@ export class UserListComponent implements OnInit {
             );
         },
         nzOnCancel: () => {
-          this.router.navigate(['/user-list']);
+          this.router.navigate(['/']);
         },
       });
     }
