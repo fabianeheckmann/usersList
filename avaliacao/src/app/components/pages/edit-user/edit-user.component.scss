@@ -1,0 +1,79 @@
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background-color: #fff;
+
+  .user-card {
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+
+  .user-info {
+    text-align: center;
+
+    .edit-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    label {
+      width: 100px;
+    }
+
+    .input-edit {
+      height: 32px;
+      width: 20vh;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 4px;
+      flex-grow: 1;
+    }
+
+    .input-edit:hover {
+      border: 1px solid #a69be9;
+    }
+
+    .button-details {
+      margin: 24px 0px 0px 0px;
+
+      .button-back {
+        background-color: #b0c4de;
+        color: #ffff;
+        border: none;
+        border-radius: 8px;
+        height: 32px;
+        width: 108px;
+        margin-right: 6px;
+      }
+
+      .button-back:hover {
+        cursor: pointer;
+        transition: 0.4s;
+        background-color: #777;
+      }
+
+      .button-edit {
+        background-color: #449e6c;
+        color: #ffff;
+        border: none;
+        border-radius: 8px;
+        height: 32px;
+        width: 64px;
+      }
+
+      .button-edit:hover {
+        cursor: pointer;
+        transition: 0.4s;
+        background-color: #318858;
+      }
+    }
+  }
+}

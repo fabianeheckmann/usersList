@@ -1,0 +1,14 @@
+footer {
+  display: flex;
+  background-color: #333;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  position: unset;
+}
+
+footer span {
+  font-weight: bold;
+  color: aliceblue;
+}

@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="content">
+    <div class="content-header">
+      <h2>User list</h2>
+      <div class="button-container">
+        <button nz-button nzType="primary" (click)="navigateToNewUser()">
+          New user
+        </button>
+      </div>
+    </div>
+    <nz-table
+      class="table"
+      [nzData]="users"
+      [nzShowPagination]="false"
+      (nzPageIndexChange)="loadUsers()"
+      nzTableLayout="fixed"
+    >
+      <thead>
+        <tr>
+          <th>Picture</th>
+          <th>Title</th>
+          <th>Name</th>
+          <th>Last name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="tr-list"
+          *ngFor="let user of users"
+          (click)="navigateToUserDetails(user.id)"
+        >
+          <td><img [src]="user.picture" alt="User pic" /></td>
+          <td>{{ user.title }}</td>
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>
+            <button
+              class="button-delete"
+              nz-button
+              nzType="danger"
+              (click)="deleteUser(user)"
+            >
+              Delete
+            </button>
+            <button
+              class="button-edit"
+              nz-button
+              nzType="primary"
+              (click)="editUser(user)"
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+    <nz-pagination
+      class="custom-pagination"
+      [nzPageIndex]="currentPage"
+      [nzTotal]="totalResults"
+      [nzPageSize]="pageSize"
+      (nzPageIndexChange)="pageIndexChanged($event)"
+    ></nz-pagination>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="centered-container">
+  <nz-card class="user-card" *ngIf="user">
+    <div class="user-info">
+      <div>
+        <img class="user-img" [src]="user.picture" alt="User picture" />
+      </div>
+      <h1>{{ user.title }} {{ user.firstName }} {{ user.lastName }}</h1>
+      <p>Email: {{ user.email }}</p>
+      <p>Phone: {{ user.phone }}</p>
+      <p>Gender: {{ user.gender }}</p>
+      <div class="button-details">
+        <button class="button-back" nz-button (click)="navigateToUserList()">
+          return to list
+        </button>
+        <button class="button-edit" nz-button (click)="editUser(user)">
+          Edit
+        </button>
+      </div>
+    </div>
+  </nz-card>
+</div>

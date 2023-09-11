@@ -1,0 +1,112 @@
+<div class="centered-container">
+  <nz-card class="user-card">
+    <form
+      nz-form
+      [formGroup]="userForm"
+      class="centered-form"
+      #formDir="ngForm"
+      (ngSubmit)="submit()"
+    >
+      <div class="form-content">
+        <h2>Add a new user</h2>
+        <nz-form-item>
+          <nz-form-control>
+            <label for="firstName" nz-form-label nz-col>First name:</label>
+            <input
+              class="form-input"
+              type="text"
+              nz-input
+              formControlName="firstName"
+              placeholder="First name"
+            />
+            <div
+              class="error-message"
+              *ngIf="isSubmitClicked && userForm.get('firstName')?.invalid"
+            >
+              Please input your first name!
+            </div>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <label for="lastName" nz-form-label nz-col>Last name:</label>
+            <input
+              class="form-input"
+              type="text"
+              nz-input
+              formControlName="lastName"
+              placeholder="Last name"
+            />
+            <div
+              class="error-message"
+              *ngIf="isSubmitClicked && userForm.get('lastName')?.invalid"
+            >
+              Please input your last name!
+            </div>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <label for="email" nz-form-label nz-col>Email:</label>
+            <input
+              class="form-input"
+              type="text"
+              nz-input
+              formControlName="email"
+              placeholder="User email"
+            />
+            <div
+              class="error-message"
+              *ngIf="isSubmitClicked && userForm.get('email')?.invalid"
+            >
+              Please input your user email!
+            </div>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <label for="title" nz-form-label nz-col>Title:</label>
+            <input
+              class="form-input"
+              type="text"
+              nz-input
+              formControlName="title"
+              placeholder="Title"
+            />
+            <div
+            class="error-message"
+            *ngIf="isSubmitClicked && userForm.get('title')?.invalid"
+          >
+          Please enter your correct title!
+          </div>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <label for="picture" nz-form-label nz-col>Picture url:</label>
+            <input
+              class="form-input"
+              type="text"
+              nz-input
+              formControlName="picture"
+              placeholder="Picture url"
+            />
+            <div
+            class="error-message"
+            *ngIf="isSubmitClicked && userForm.get('picture')?.invalid"
+          >
+          Please enter your picture!
+          </div>
+          </nz-form-control>
+        </nz-form-item>
+        <div nz-form-item nz-row>
+          <div nz-form-control nz-col nzOffset="6">
+            <button nz-button class="form-button" type="submit">
+              {{ btnText }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </nz-card>
+</div>

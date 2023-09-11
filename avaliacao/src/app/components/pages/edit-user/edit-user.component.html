@@ -1,0 +1,35 @@
+<div class="centered-container">
+  <nz-card class="user-card" *ngIf="user">
+    <div class="user-info">
+      <h2>Edit user</h2>
+      <div class="edit-info">
+        <label>Picture url:</label>
+        <input class="input-edit" [(ngModel)]="user.picture" />
+      </div>
+      <div class="edit-info">
+        <label>Title:</label>
+        <input class="input-edit" [(ngModel)]="user.title" />
+      </div>
+      <div class="edit-info">
+        <label>First name:</label>
+        <input class="input-edit" [(ngModel)]="user.firstName" />
+      </div>
+      <div class="edit-info">
+        <label>Last name:</label>
+        <input class="input-edit" [(ngModel)]="user.lastName" />
+      </div>
+      <div class="edit-info">
+        <label>Email:</label>
+        <input class="input-edit" [(ngModel)]="user.email" />
+      </div>
+      <div class="button-details">
+        <button class="button-back" nz-button (click)="navigateToUserList()">
+          return to list
+        </button>
+        <button class="button-edit" nz-button (click)="updateUserData()">
+          Save
+        </button>
+      </div>
+    </div>
+  </nz-card>
+</div>

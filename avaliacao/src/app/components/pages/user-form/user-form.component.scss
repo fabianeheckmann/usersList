@@ -1,0 +1,70 @@
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: #fff;
+
+  .user-card {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .centered-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 55vh;
+
+    .form-content {
+      width: 35vh;
+      height: 50vh;
+      border-radius: 12px;
+
+      label {
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .form-input {
+        height: 32px;
+        width: 32vh;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 12px;
+      }
+
+      .form-input:hover {
+        border: 1px solid #a69be9;
+      }
+
+      .form-button {
+        background-color: #449e6c;
+        width: 12vh;
+        height: 4vh;
+        border: none;
+        border-radius: 8px;
+        color: #ffff;
+        margin-left: 12px;
+      }
+
+      .form-button:hover {
+        cursor: pointer;
+        transition: 0.4s;
+        background-color: #318858;
+      }
+    }
+  }
+
+  .error-message {
+    color: #f5222d;
+    font-size: 12px;
+    margin-top: 0px;
+  }
+}
